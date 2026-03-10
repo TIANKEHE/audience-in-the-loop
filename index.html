@@ -1,547 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="Audience in the Loop: Viewer Feedback-Driven Content Creation in Micro-drama Production on Social Media - Gengchen Cao, Tianke He, Yixuan Liu, RAY LC">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="Exploring the collaborative creative processes of micro-drama writing on Chinese social media. Based on 28 interviews, this study reveals how audience interaction and real-time feedback shape new narrative paradigms.">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="Micro-dramas, Participatory Culture, Collaborative Content Creation">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="Gengchen Cao, Tianke He, Yixuan Liu, RAY LC">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="Audience in the Loop: Viewer Feedback-Driven Content Creation in Micro-drama Production on Social Media">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="The popularization of social media has led to increasing consumption of narrative content in byte-sized formats. Such micro-dramas contain fast-pace action and emotional cliffs, particularly attractive to emerging Chinese markets in platforms like Douyin and Kuaishou. Content writers for micro-dramas must adapt to fast-pace, audience-directed workflows, but previous research has focused instead on examining writers'experiences of platform affordances or their perceptions of platform bias, rather than the step-by-step processes through which they actually write and iterative content. In 28 semi-structured interviews with scriptwriters and writers specialized in micro-dramas, we found that the short-turn-around workflow leads to writers taking on multiple roles simultaneously, iteratively adapting to storylines in response to real-time audience feedback in the form of comments, reposts, and memes. We identified unique narrative styles such as AI-generated micro-dramas and audience-responsive micro-dramas. This work reveals audience interaction as a new paradigm for collaborative creative processes on social media.">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
-
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Paper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            background-attachment: fixed;
         }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
-  <style>
-      /* 全局风格：白色背景，深灰文字 */
-      body { font-family: 'Inter', sans-serif; color: #333; background-color: #fff; line-height: 1.6; }
-      
-      /* 标题：更大更轻盈 */
-      .publication-title { font-weight: 700; color: #000; letter-spacing: -0.02em; padding: 2rem 0; }
-      
-      /* 链接：去掉下划线，使用优雅的蓝色 */
-      a { color: #0066cc; text-decoration: none; transition: 0.3s; }
-      a:hover { color: #004499; text-decoration: underline; }
-
-      /* 移除阴影和边框，增加留白 */
-      .section { padding: 4rem 1.5rem !important; border: none !important; }
-      .hero.is-light { background-color: #fff !important; } 
-      
-      /* 按钮：更像链接而不是笨重的盒子 */
-      .external-link.button { border-radius: 4px !important; border: 1px solid #eee !important; background: #fff !important; color: #444 !important; font-weight: 500; }
-      .external-link.button:hover { background: #f8f8f8 !important; border-color: #ccc !important; }
-
-      /* 摘要：增加字间距和行高 */
-      .content p { font-size: 1.15rem; color: #4a4a4a; text-align: left !important; }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        /* Glassmorphism Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+        
+        .meta-item {
+            opacity: 0.85;
+        }
+        
+        /* Content Section */
+        .content-section {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 35px;
+            margin-bottom: 25px;
+            color: white;
+            line-height: 1.8;
+        }
+        
+        .content-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #ffffff, #d4d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .content-section p {
+            margin-bottom: 15px;
+            font-size: 15px;
+            opacity: 0.95;
+            text-align: justify;
+        }
+        
+        /* Input Fields with Frosted Glass */
+        .glass-input {
+            width: 100%;
+            padding: 12px 16px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: white;
+            font-size: 14px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .glass-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+        
+        .glass-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: white;
+            font-family: inherit;
+            font-size: 14px;
+            backdrop-filter: blur(5px);
+            resize: vertical;
+            min-height: 100px;
+            transition: all 0.3s ease;
+        }
+        
+        .glass-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .glass-textarea:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Button */
+        .glass-button {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 32px;
+            font-size: 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+        
+        .glass-button:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .glass-button:active {
+            transform: translateY(0);
+        }
+        
+        /* Abstract Box */
+        .abstract-box {
+            background: rgba(255, 255, 255, 0.12);
+            border-left: 3px solid rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Code Block */
+        .code-block {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #a8e6cf;
+        }
+        
+        /* Tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .tag {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .tag:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            font-size: 13px;
+        }
+        
+        @media (max-width: 768px) {
+            .glass-card {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 28px;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+            
+            .content-section h2 {
+                font-size: 18px;
+            }
+            
+            .meta-info {
+                gap: 15px;
+                font-size: 13px;
+            }
+        }
     </style>
-
 </head>
 <body>
-
-
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <main id="main-content">
-<section class="section" style="padding-top: 6rem; padding-bottom: 3rem; background-color: #ffffff;">
-  <div class="container is-max-desktop">
-    <div class="columns is-vcentered">
-      <div class="column is-10">
-        
-        <h1 class="title is-1 publication-title">
-  <span style="font-size: 2.5rem;">Audience in the Loop:</span> 
-  <br>
-  <span style="font-size: 1.5rem; font-weight: 400; color: #4a4a4a;">
-    Viewer Feedback-Driven Content Creation in Micro-drama Production
-  </span>
-</h1>
-
-        <div class="is-size-5" style="font-weight: 600; margin-bottom: 0.8rem; color: #111;">
-          <span class="author-block"><a href="mailto:gencghencao@gmail.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid #ccc;">Gengchen Cao</a><sup>*1</sup>,</span>
-          <span class="author-block"><a href="mailto:tianke.he@outlook.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid #ccc;">Tianke He</a><sup>*2</sup>,</span>
-          <span class="author-block"><a href="mailto:liuyixuan20240225@163.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid #ccc;">Yixuan Liu</a><sup>3</sup>,</span>
-          <span class="author-block"><a href="mailto:ray.lc@cityu.edu.hk" style="color: inherit; text-decoration: none; border-bottom: 1px solid #ccc;">RAY LC</a><sup>3†</sup></span>
-        </div>
-
-            <div class="is-size-6" style="color: #888; margin-bottom: 1.5rem; font-weight: 400;">
-          <sup>1</sup> Tsinghua University &nbsp;&nbsp; | &nbsp;&nbsp; 
-          <sup>2</sup> Sichuan University of Media and Communication &nbsp;&nbsp; | &nbsp;&nbsp; 
-          <sup>3</sup> City University of Hong Kong
-        </div>
-
-        <div style="font-size: 0.6rem; color: #bbb; letter-spacing: 0.02em;">
-          <sup>*</sup> Equal Contribution &nbsp;&nbsp; <sup>†</sup> Corresponding Author
-        </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+    <div class="container">
+        <!-- Header -->
+        <div class="glass-card header">
+            <h1>Research Paper Title</h1>
+            <p>A Modern Glassmorphism Design</p>
+            <div class="meta-info">
+                <div class="meta-item">👤 Your Name</div>
+                <div class="meta-item">🏢 Your Institution</div>
+                <div class="meta-item">📅 2026</div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            The popularization of social media has led to increasing consumption of narrative content in byte-sized formats. Such micro-dramas contain fast-pace action and emotional cliffs, particularly attractive to emerging Chinese markets in platforms like Douyin and Kuaishou. Content writers for micro-dramas must adapt to fast-pace, audience-directed workflows, but previous research has focused instead on examining writers'experiences of platform affordances or their perceptions of platform bias, rather than the step-by-step processes through which they actually write and iterative content. In 28 semi-structured interviews with scriptwriters and writers specialized in micro-dramas, we found that the short-turn-around workflow leads to writers taking on multiple roles simultaneously, iteratively adapting to storylines in response to real-time audience feedback in the form of comments, reposts, and memes. We identified unique narrative styles such as AI-generated micro-dramas and audience-responsive micro-dramas. This work reveals audience interaction as a new paradigm for collaborative creative processes on social media.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
         
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Audience in the Loop: Viewer Feedback-Driven Content Creation in Micro-drama Production on Social Media Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+        <!-- Abstract -->
+        <div class="content-section">
+            <h2>Abstract</h2>
+            <div class="abstract-box">
+                <p>This is a modern web design featuring glassmorphism effects with a beautiful gradient background. The frosted glass texture creates a sophisticated and contemporary look that works great for research papers, portfolios, and modern web applications.</p>
+            </div>
+            <div class="tags">
+                <div class="tag">Glassmorphism</div>
+                <div class="tag">Modern Design</div>
+                <div class="tag">Gradient Background</div>
+                <div class="tag">Frosted Glass</div>
+            </div>
         </div>
-      </div>
+        
+        <!-- Introduction -->
+        <div class="content-section">
+            <h2>Introduction</h2>
+            <p>Glassmorphism is a modern design trend that combines the principles of glass morphism with contemporary web design. It features semi-transparent, frosted glass-like elements with blur effects that create depth and visual hierarchy.</p>
+            <p>This design approach has become increasingly popular in modern UI/UX design because it:</p>
+            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                <li>Creates a sense of depth and layering</li>
+                <li>Provides a modern and sophisticated aesthetic</li>
+                <li>Improves readability through contrast</li>
+                <li>Works well with gradient backgrounds</li>
+            </ul>
+        </div>
+        
+        <!-- Features Section -->
+        <div class="content-section">
+            <h2>Key Features</h2>
+            <p><strong>✨ Gradient Background:</strong> Dynamic gradient that spans the entire viewport with fixed positioning for a full-screen effect.</p>
+            <p><strong>🔮 Frosted Glass Effect:</strong> Uses backdrop-filter with blur for the frosted glass texture on all cards and elements.</p>
+            <p><strong>🎨 Semi-transparent Elements:</strong> RGBA colors allow the gradient to show through for depth perception.</p>
+            <p><strong>⌨️ Interactive Input Fields:</strong> Glassmorphism-styled form inputs with focus states.</p>
+        </div>
+        
+        <!-- Contact Form Section -->
+        <div class="content-section">
+            <h2>Get in Touch</h2>
+            <form>
+                <input type="text" class="glass-input" placeholder="Your Name" required>
+                <input type="email" class="glass-input" placeholder="Your Email" required>
+                <textarea class="glass-textarea" placeholder="Your Message..."></textarea>
+                <button type="submit" class="glass-button">Send Message</button>
+            </form>
+        </div>
+        
+        <!-- Code Example -->
+        <div class="content-section">
+            <h2>CSS Example</h2>
+            <p>Here's how the frosted glass effect is created:</p>
+            <div class="code-block">
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 20px;
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2026 Your Name. All rights reserved. | Built with HTML & CSS</p>
+        </div>
     </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
