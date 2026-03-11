@@ -7,9 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
+            /* 统一主色调为 Abstract 标题的粉色 */
             --primary-pink: #e06666; 
-            --gradient-start: #f284a0;
-            --gradient-end: #fce4ed;
+            --gradient-start: #e06666; /* 首页渐变起点 */
+            --gradient-end: #f9eaea;   /* 首页渐变终点，柔和过渡 */
             --grid-line: rgba(224, 102, 102, 0.12);
             --text-dark: #2d3436;
         }
@@ -25,6 +26,7 @@
         /* --- Hero Section --- */
         .hero-section {
             min-height: 100vh;
+            /* 使用统一后的渐变色 */
             background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
             display: flex; flex-direction: column; align-items: center;
             padding: 5rem 2rem; box-sizing: border-box;
@@ -35,7 +37,7 @@
         
         .hero-section h1 {
             font-size: 3.2rem; font-weight: 800; margin: 0; line-height: 1.1;
-            letter-spacing: -2px; text-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            letter-spacing: -2px; text-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .authors { margin-top: 2rem; font-weight: 600; font-size: 1.2rem; }
@@ -47,16 +49,16 @@
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 24px; padding: 2rem;
-            width: 300px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            width: 300px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
         }
 
-        .glass-card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.4); }
+        .glass-card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.35); }
 
         .glass-card .label {
             font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;
@@ -75,15 +77,14 @@
         .btn-action {
             text-decoration: none; color: white; font-family: 'JetBrains Mono', monospace;
             font-weight: 600; font-size: 1rem; padding: 14px 30px; border-radius: 50px;
-            background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(10px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex; align-items: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
         .btn-action:hover {
-            background: var(--primary-pink); border-color: var(--primary-pink);
-            transform: translateY(-5px); box-shadow: 0 10px 25px rgba(224, 102, 102, 0.4);
-            letter-spacing: 1px;
+            background: white; color: var(--primary-pink);
+            transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
         /* --- Content Section --- */
@@ -98,7 +99,7 @@
 
         .abstract-box {
             max-width: 900px; margin: 0 auto;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             padding: 4rem; border-radius: 40px;
             border: 1px solid rgba(224, 102, 102, 0.1);
             box-shadow: 0 30px 60px rgba(0,0,0,0.04);
@@ -115,7 +116,7 @@
         .abstract-text { font-size: 1.1rem; line-height: 1.7; text-align: justify; color: #444; }
 
         .keyword-tag {
-            background: #fce4ed; color: var(--primary-pink); padding: 4px 12px; 
+            background: #fdf2f2; color: var(--primary-pink); padding: 4px 12px; 
             border-radius: 6px; font-size: 0.85rem; font-weight: 700; margin-right: 8px;
             display: inline-block; margin-top: 5px;
         }
@@ -145,7 +146,7 @@
         }
 
         .bibtex-box {
-            background: #2d3436; color: #a8dbd9; padding: 2rem; border-radius: 15px;
+            background: #2d3436; color: #eee; padding: 2rem; border-radius: 15px;
             font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; margin-top: 2rem;
             white-space: pre-wrap; position: relative; line-height: 1.5;
         }
