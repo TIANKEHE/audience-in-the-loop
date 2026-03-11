@@ -22,7 +22,7 @@
             scroll-behavior: smooth;
         }
 
-        /* --- 第一部分：Hero Section --- */
+        /* --- Hero Section --- */
         .hero-section {
             min-height: 100vh;
             background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
@@ -96,7 +96,7 @@
             letter-spacing: 1px;
         }
 
-        /* --- 第二部分：Content Section --- */
+        /* --- Content Section --- */
         .content-section {
             background-color: #fcfcfc;
             background-image: 
@@ -120,42 +120,65 @@
             display: inline-block; margin-bottom: 1.5rem;
         }
 
-        /* 1. 调整 Abstract 正文字号，更紧凑 */
         .abstract-text { 
-            font-size: 1.1rem; 
-            line-height: 1.6; 
-            text-align: justify; 
-            color: #444; 
+            font-size: 1.1rem; line-height: 1.6; text-align: justify; color: #444; 
         }
 
-        /* 2. 图片及图注样式 */
-        .figure-container {
-            margin: 3rem 0;
-            text-align: center;
-        }
-
+        .figure-container { margin: 3rem 0; text-align: center; }
         .figure-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
+            max-width: 100%; height: auto; border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
-
         .figure-caption {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: #7f8c8d; /* 灰色 */
-            line-height: 1.5;
-            text-align: left;
-            padding: 0 10px;
+            margin-top: 1rem; font-size: 0.9rem; color: #7f8c8d;
+            line-height: 1.5; text-align: left; padding: 0 10px;
             border-left: 3px solid #eee;
         }
 
-        .bibtex {
-            background: #2d3436; color: #dfe6e9; padding: 2.5rem; border-radius: 15px;
-            font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; margin-top: 4rem;
-            white-space: pre-wrap; word-break: break-all;
+        /* --- BibTeX 参考图片样式还原 --- */
+        .bibtex-header {
+            font-size: 1.8rem; font-weight: 800; color: #333; margin-top: 4rem; margin-bottom: 1.5rem;
         }
+
+        .bibtex-container {
+            background-color: #2b2826;
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .bibtex-content {
+            margin: 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #a8dbd9; /* 括号和标识符颜色 */
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .bibtex-content .keyword { color: #82c9c7; } /* @article */
+        .bibtex-content .key { color: #e6b48a; }     /* title, author 等 */
+        .bibtex-content .value { color: #a8dbd9; }   /* 内容部分 */
+
+        .copy-button {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            cursor: pointer;
+            display: flex; align-items: center; gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .copy-button:hover { background: rgba(255,255,255,0.15); }
 
         footer { text-align: center; padding: 5rem; color: #b2bec3; font-size: 0.9rem; }
 
@@ -172,7 +195,6 @@
         <div class="title-container">
             <h1>Audience in the Loop: </h1>
             <h2>Viewer Feedback-Driven Content Creation in Micro-drama Production on Social Media</h2>
-
             <div class="authors">Gengchen Cao*¹ · Tianke He*² · Yixuan Liu³ · RAY LC³⁺</div>
             <div class="affiliations">¹Tsinghua University | ²Sichuan University of Media and Communication | ³City University of Hong Kong</div>
         </div>
@@ -212,19 +234,27 @@
             </div>
 
             <div class="figure-container">
-                <img src="static/images/fig1.png" alt="Production workflow of My Sweet Home">
+                <img src="static/images/fig1.png" alt="Production workflow">
                 <p class="figure-caption">
                     <strong>Figure 1:</strong> Production workflow of “My Sweet Home”, showing how audience comments and engagement were integrated into narrative development, promotional design, and media circulation, illustrating an “audience-in-the-loop” model of micro-drama creation.
                 </p>
             </div>
 
-            <div class="bibtex">
-@inproceedings{cao2026audience,
-  title={Audience in the Loop: Viewer Feedback-Driven Content Creation in Micro-drama Production on Social Media},
-  author={Cao, Gengchen and He, Tianke and Liu, Yixuan and LC, RAY},
-  booktitle={Proceedings of CHI 2026},
-  year={2026}
-}
+            <div class="bibtex-header">BibTeX</div>
+            <div class="bibtex-container">
+                <button class="copy-button" onclick="copyBib()">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy
+                </button>
+                <pre class="bibtex-content" id="bibtex-text">
+<span class="keyword">@article</span>{cao2026audience,
+  <span class="key">title</span>={<span class="value">Audience in the Loop: Viewer Feedback-Driven Content Creation in Micro-drama Production on Social Media</span>},
+  <span class="key">author</span>={<span class="value">Cao, Gengchen and He, Tianke and Liu, Yixuan and LC, RAY</span>},
+  <span class="key">journal</span>={<span class="value">arXiv preprint arXiv:2602.14045</span>},
+  <span class="key">year</span>={<span class="value">{2026}</span>},
+  <span class="key">publisher</span>={<span class="value">{ACM}</span>},
+  <span class="key">doi</span>={<span class="value">{10.1145/3772318.3790592}</span>}
+}</pre>
             </div>
         </div>
     </section>
@@ -233,5 +263,16 @@
         © 2026 CHI Conference · Research on Human-Computer Interaction
     </footer>
 
+    <script>
+        function copyBib() {
+            const bibText = document.getElementById('bibtex-text').innerText;
+            navigator.clipboard.writeText(bibText).then(() => {
+                const btn = document.querySelector('.copy-button');
+                const originalText = btn.innerHTML;
+                btn.innerText = 'Copied!';
+                setTimeout(() => { btn.innerHTML = originalText; }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
