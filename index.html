@@ -7,10 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* 统一主色调为 Abstract 标题的粉色 */
             --primary-pink: #e06666; 
-            --gradient-start: #e06666; /* 首页渐变起点 */
-            --gradient-end: #f9eaea;   /* 首页渐变终点，柔和过渡 */
+            --gradient-start: #e06666; 
+            --gradient-end: #f9eaea;   
             --grid-line: rgba(224, 102, 102, 0.12);
             --text-dark: #2d3436;
         }
@@ -20,13 +19,12 @@
             font-family: 'Inter', -apple-system, sans-serif;
             color: var(--text-dark);
             background-color: #fafafa;
-            scroll-behavior: smooth;
+            scroll-behavior: smooth; /* 确保平滑滚动 */
         }
 
         /* --- Hero Section --- */
         .hero-section {
             min-height: 100vh;
-            /* 使用统一后的渐变色 */
             background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
             display: flex; flex-direction: column; align-items: center;
             padding: 5rem 2rem; box-sizing: border-box;
@@ -197,13 +195,14 @@
         <div class="action-buttons">
             <a href="https://arxiv.org/abs/2602.14045" target="_blank" class="btn-action">arXiv</a>
             <a href="static/pdfs/CHI2026_AudienceInTheLoop.pdf" target="_blank" class="btn-action">Full Paper</a>
-            <a href="#" class="btn-action">Presentation</a>
+            <a href="#presentation-video" class="btn-action">Presentation</a>
         </div>
     </section>
 
     <section class="content-section">
         <div class="abstract-box">
-            <h2>Video Preview</h2>
+            
+            <h2 id="presentation-video">Video Preview</h2>
             <div class="video-container">
                 <video controls poster="static/images/video_poster.png">
                     <source src="static/videos/preview.mp4" type="video/mp4">
@@ -289,7 +288,7 @@
                 <button class="copy-btn" onclick="copyBib()">Copy BibTeX</button>
 @article{cao2026audience,
   title={Audience in the Loop: Viewer Feedback-Driven Content Creation in Micro-drama Production on Social Media},
-  author={Cao, Gengchen and He, Tianke and Liu, Yixuan and LC, RAY},
+  author={Cao, Gengchen and He, Tianke capital and Liu, Yixuan and LC, RAY},
   journal={arXiv preprint arXiv:2602.14045},
   year={2026},
   publisher={ACM},
