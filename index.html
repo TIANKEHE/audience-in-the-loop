@@ -12,7 +12,6 @@
             --gradient-end: #f9eaea;   
             --grid-line: rgba(224, 102, 102, 0.12);
             --text-dark: #2d3436;
-            --soft-bg: #fdfdfd;
         }
 
         body, html {
@@ -120,29 +119,41 @@
             display: inline-block; margin-top: 5px;
         }
 
-        /* Figures */
-        .figure-container { margin: 2rem 0; text-align: center; }
-        .figure-container img { max-width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        /* Media Containers */
+        .figure-container, .video-container { margin: 2rem 0; text-align: center; }
+        .figure-container img, .video-container video { 
+            max-width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+        }
+        
         .figure-row { display: flex; gap: 20px; margin: 2rem 0; align-items: flex-start; }
         .figure-row .figure-container { flex: 1; margin: 0; }
-        .figure-caption { margin-top: 1rem; font-size: 0.85rem; color: #7f8c8d; line-height: 1.4; text-align: left; padding: 0 12px; border-left: 3px solid #eee; }
 
-        /* Discussion & Conclusion Styles */
+        .figure-caption {
+            margin-top: 1rem; font-size: 0.85rem; color: #7f8c8d; line-height: 1.4;
+            text-align: left; padding: 0 12px; border-left: 3px solid #eee;
+        }
+
+        /* --- NEW: Discussion & Conclusion Enhancements --- */
         .discussion-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-top: 1.5rem; }
-        .disc-item h4 { color: var(--text-dark); margin-bottom: 0.8rem; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+        .disc-item h4 { 
+            color: var(--text-dark); margin-bottom: 0.8rem; font-size: 1.25rem; 
+            display: flex; align-items: center; gap: 10px; 
+        }
         .disc-item h4::before { content: '◈'; color: var(--primary-pink); font-size: 1rem; }
         
-        .implications-box {
-            background: #fdf2f2; border-radius: 20px; padding: 2rem;
-            border-left: 6px solid var(--primary-pink); margin-top: 2rem;
+        .implications-card {
+            background: #fffafa; border: 1px solid rgba(224, 102, 102, 0.2);
+            border-left: 6px solid var(--primary-pink);
+            padding: 2rem; border-radius: 20px; margin: 3rem 0;
+            box-shadow: 0 15px 35px rgba(224, 102, 102, 0.05);
+        }
+        .implications-card h3 { color: var(--primary-pink); margin-top: 0; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: 1rem; }
+
+        .conclusion-quote {
+            font-size: 1.25rem; font-style: italic; line-height: 1.6;
+            color: #555; padding-left: 1.5rem; border-left: 4px solid #eee; margin: 2.5rem 0;
         }
 
-        .conclusion-statement {
-            font-style: italic; font-size: 1.2rem; color: #555;
-            line-height: 1.6; border-left: 4px solid #eee; padding-left: 1.5rem; margin: 2rem 0;
-        }
-
-        /* Grid UI */
         .methods-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 2rem 0; }
         .method-tile { background: #f9f9f9; padding: 1.5rem; border-radius: 20px; text-align: center; }
         .method-tile .num { font-size: 2rem; font-weight: 800; color: var(--primary-pink); display: block;}
@@ -162,8 +173,8 @@
         footer { text-align: center; padding: 5rem; color: #b2bec3; font-size: 0.9rem; }
 
         @media (max-width: 768px) {
-            .figure-row { flex-direction: column; }
-            .methods-grid { grid-template-columns: 1fr; }
+            .hero-section h1 { font-size: 2.2rem; }
+            .methods-grid, .figure-row { grid-template-columns: 1fr; flex-direction: column; }
             .abstract-box { padding: 2.5rem 1.5rem; }
         }
     </style>
@@ -177,11 +188,13 @@
             <div class="authors">Gengchen Cao*¹ · Tianke He*² · Yixuan Liu³ · RAY LC³⁺</div>
             <div class="affiliations">¹Tsinghua University | ²Sichuan University of Media and Communication | ³City University of Hong Kong</div>
         </div>
+
         <div class="findings-container">
-            <div class="glass-card"><span class="label">Finding 01</span><h4>🎭 Multi-role Adaptation</h4><p>Short-turn-around workflows lead to creators taking on multiple roles.</p></div>
-            <div class="glass-card"><span class="label">Finding 02</span><h4>🔍 Implicit Signals</h4><p>Comments and memes serve as indicators of emotional resonance.</p></div>
-            <div class="glass-card"><span class="label">Finding 03</span><h4>🆕 New Paradigms</h4><p>AI-generated and audience-responsive interactive content styles.</p></div>
+            <div class="glass-card"><span class="label">Finding 01</span><h4>🎭 Multi-role Adaptation</h4><p>Short-turn-around workflows lead to writers taking on multiple roles simultaneously.</p></div>
+            <div class="glass-card"><span class="label">Finding 02</span><h4>🔍 Implicit Signals</h4><p>Creators utilize comments and memes as indicators of emotional resonance.</p></div>
+            <div class="glass-card"><span class="label">Finding 03</span><h4>🆕 New Paradigms</h4><p>Identified unique narrative styles such as AI-generated and interactive micro-dramas.</p></div>
         </div>
+
         <div class="action-buttons">
             <a href="https://arxiv.org/abs/2602.14045" target="_blank" class="btn-action">arXiv</a>
             <a href="#presentation-video" class="btn-action">Presentation</a>
@@ -191,73 +204,79 @@
     <section class="content-section">
         <div class="abstract-box">
             
+            <h2 id="presentation-video">Video Preview</h2>
+            <div class="video-container">
+                <video controls poster="static/images/video_poster.png">
+                    <source src="static/videos/preview.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="figure-caption"><strong>Video:</strong> A 10-minute overview of our findings on micro-drama production workflows.</p>
+            </div>
+
             <h2>Abstract</h2>
             <div class="abstract-text">
-                Through 28 semi-structured interviews, we found that the workflow leads to writers iteratively adapting to storylines in response to <strong>real-time audience feedback</strong>. This work reveals audience interaction as a new paradigm for collaborative creative processes on social media.
+                The popularization of social media has led to increasing consuming of narrative content in byte-sized formats. Such <strong>micro-dramas</strong> contain fast-pace action and emotional cliffs. Through 28 semi-structured interviews, we found that the workflow leads to writers iteratively adapting to storylines in response to <strong>real-time audience feedback</strong>.
+            </div>
+
+            <div class="figure-container">
+                <img src="static/images/fig1.png" alt="Production workflow">
+                <p class="figure-caption"><strong>Figure 1:</strong> Production workflow showing an “audience-in-the-loop” model.</p>
+            </div>
+
+            <h2>Methods</h2>
+            <div class="methods-grid">
+                <div class="method-tile"><span class="num">28</span><span class="label">Interviewees</span></div>
+                <div class="method-tile"><span class="num">6m-9y</span><span class="label">Exp. Range</span></div>
+                <div class="method-tile"><span class="num">Inductive</span><span class="label">Coding Method</span></div>
             </div>
 
             <h2>Key Results</h2>
             <div class="abstract-text">
-                <p><strong>🚀 Workflow Evolution:</strong> Transitioned from linear industrial models to "test-and-broadcast" rapid cycles. Algorithms created new roles like <em>Traffic Operation Managers</em>.</p>
+                <p><strong>🚀 Workflow Evolution:</strong> Transitioned from linear industrial models to "test-and-broadcast" rapid cycles.</p>
             </div>
             <div class="figure-container">
                 <img src="static/images/fig4.png" alt="Comparative Workflow">
                 <p class="figure-caption"><strong>Figure 4:</strong> Comparative Workflow of Traditional Screenwriting and Microdrama Creation.</p>
             </div>
 
-            <div class="abstract-text">
-                <p><strong>🔄 Iterative Feedback:</strong> Creators rely on quantitative data and textual feedback to adjust actor screen time and plot reversals in real-time.</p>
-            </div>
-
             <div class="figure-row">
                 <div class="figure-container">
-                    <img src="static/images/fig5.png" alt="Feedback Step 1/2">
-                    <p class="figure-caption"><strong>Figure 5:</strong> Evidence-backed feedback handling workflow (Step 1/2). Example source: “Mr. Li, please sign for your twins..."</p>
+                    <img src="static/images/fig5.png" alt="Step 1/2">
+                    <p class="figure-caption"><strong>Figure 5:</strong> Feedback handling (Step 1/2).</p>
                 </div>
                 <div class="figure-container">
-                    <img src="static/images/fig6.png" alt="Feedback Step 3/4">
-                    <p class="figure-caption"><strong>Figure 6:</strong> Evidence-backed feedback handling workflow (Step 3/4). Example source: “Mr. Li, please sign for your twins..."</p>
+                    <img src="static/images/fig6.png" alt="Step 3/4">
+                    <p class="figure-caption"><strong>Figure 6:</strong> Feedback handling (Step 3/4).</p>
                 </div>
-            </div>
-
-            <h3>🎬 Emerging Themes & Narrative Styles</h3>
-            <div class="abstract-text" style="font-size: 1rem; background: var(--soft-bg); padding: 1.5rem; border-radius: 12px; border: 1px solid #f0f0f0;">
-                <p><strong>• Thematic Shifts:</strong> Focus on everyday social conflicts, cross-domain functional narratives, and AI-powered spectacular genres.</p>
-                <p><strong>• Narrative Innovations:</strong> Adopt fragmented-integrated storytelling, participatory interactive structures, and AI-augmented production.</p>
-                <p><strong>• Cross-Cultural Adaptation:</strong> Chinese firms dominate overseas markets with cost-effective translation and culturally adaptive script rewriting.</p>
-            </div>
-
-            <div style="background: #fff5f5; border: 1px dashed var(--primary-pink); padding: 1.5rem; border-radius: 16px; margin-top: 2rem;">
-                <strong style="color: #c0392b;">Pitfalls:</strong> Overreliance on platform feedback can lead to homogenization, fake traffic risks, and the marginalization of the "silent majority."
             </div>
 
             <h2>Discussion</h2>
             <div class="discussion-grid">
                 <div class="disc-item">
                     <h4>Reconstruction of Narrative Interactivity</h4>
-                    <p class="abstract-text" style="font-size: 1rem;">Micro-dramas are no longer pre-scripted linear works, but rather participatory cultural products that are constantly reshaped through comments, memes, and hashtags. The interactivity is driven by implicit audience signals, forming a distributed interactive system where feedback penetrates the entire creative process, and platform algorithms amplify these signals to construct a dynamic narrative community of "audiences-creators-platforms".</p>
+                    <p class="abstract-text" style="font-size: 1rem;">Micro-dramas are no longer pre-scripted linear works, but rather participatory cultural products that are constantly reshaped through comments, memes, and hashtags. The interactivity of micro-dramas is driven by implicit audience signals, forming a distributed interactive system where audience feedback penetrates the entire creative process, and platform algorithms amplify these signals to construct a dynamic narrative community of "audiences-creators-platforms".</p>
                 </div>
 
                 <div class="disc-item">
                     <h4>Personalization and Risks</h4>
-                    <p class="abstract-text" style="font-size: 1rem;">While data feedback helps creators align with audience expectations, it may also lead to content homogenization and confine audiences to familiar narrative frameworks. In addition, the discourse power in comment sections is mostly held by a small number of active users, easily marginalizing the voices of the silent majority and minority groups. Meanwhile, sensitive personal information in comments poses the risk of user privacy leakage.</p>
+                    <p class="abstract-text" style="font-size: 1rem;">While data feedback helps creators align with audience expectations, it may also lead to content homogenization and confine audiences to familiar narrative frameworks, reducing their exposure to diverse perspectives. In addition, the strategic guidance of platforms and creators may make audience feedback "unnatural", and the discourse power is mostly held by a small number of active users, easily marginalizing the silent majority. Meanwhile, sensitive personal information in comments may be captured, posing user privacy leakage risks.</p>
                 </div>
             </div>
 
-            <div class="implications-box">
-                <h4 style="margin-top:0; color: var(--primary-pink); font-size: 1.2rem;">🛠 Design Implications</h4>
-                <p class="abstract-text" style="font-size: 1rem; color: #444;">
-                    It is necessary to provide screenwriters with more <strong>transparent tools</strong> for interpreting audience signals to maintain narrative coherence. Establish mechanisms to protect <strong>minority opinions</strong> and ensure ecosystem diversity. Transform evaluation indicators from short-term interactive data (e.g., completion rates) to <strong>long-term satisfaction metrics</strong>, and build configurable feedback systems to explore alternative narrative scenarios.
+            <div class="implications-card">
+                <h3>🛠 Design Implications</h3>
+                <p class="abstract-text" style="font-size: 1.05rem; color: #333;">
+                    It is necessary to provide screenwriters with more <strong>transparent tools</strong> for interpreting audience signals to maintain narrative coherence during rapid iteration. Establish mechanisms to protect <strong>minority opinions</strong> and ensure the diversity of the creative ecosystem. Transform evaluation indicators from short-term interactive data to <strong>long-term satisfaction metrics</strong>, and build configurable feedback systems to allow creators to explore <strong>alternative narrative scenarios</strong> based on different feedback perspectives.
                 </p>
             </div>
 
             <h2>Conclusion</h2>
-            <div class="conclusion-statement">
-                This study uncovers a data-responsive, market-oriented distributed creation model in micro-drama production. This <strong>"audience-in-the-loop"</strong> mechanism reshapes the creative identity of creators and transforms writing from an author-centered activity into a sociotechnical process of negotiation jointly conducted by screenwriters, audiences, and platforms. 
+            <div class="conclusion-quote">
+                This study uncovers a data-responsive, market-oriented distributed creation model in micro-drama production. This "audience-in-the-loop" mechanism reshapes the creative identity of creators and transforms writing from an author-centered activity into a sociotechnical process of negotiation.
             </div>
-            <p class="abstract-text" style="font-size: 1rem;">
+            <div class="abstract-text">
                 The findings provide a new perspective for understanding collaborative creative labor in the platformized era, and also offer design insights for the sustainable development of the micro-drama ecosystem, emphasizing the need to balance audience influence, narrative diversity, and creative autonomy in platform design.
-            </p>
+            </div>
 
             <h2>BibTeX</h2>
             <div class="bibtex-box" id="bibtex-text">
